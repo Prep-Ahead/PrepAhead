@@ -11,7 +11,7 @@
   --color-destructive-200: #c44141;
 
   --color-primary-100: #dddfff;
-  --color-primary-200: #cac5fe;
+  --color-primary-200: #d76bed;
 
   --color-light-100: #d6e0ff;
   --color-light-400: #6870a6;
@@ -21,6 +21,8 @@
   --color-dark-100: #020408;
   --color-dark-200: #27282f;
   --color-dark-300: #242633;
+
+  --color-intersection-200: #fa6d0e;
 
   --font-mona-sans: "Mona Sans", sans-serif;
 
@@ -217,11 +219,11 @@
     }
 
     .card-interviewer {
-      @apply flex-center flex-col gap-2 p-7 h-[400px] blue-gradient-dark rounded-lg border-2 border-primary-200/50 flex-1 sm:basis-1/2 w-full;
+      @apply flex-center flex-col gap-2 p-7 h-[400px] dark-gradient rounded-lg border-2 border-gradient flex-1 sm:basis-1/2 w-full;
     }
 
     .avatar {
-      @apply z-10 flex items-center justify-center blue-gradient rounded-full size-[120px] relative;
+      @apply z-10 flex items-center justify-center blue-gradient rounded-lg size-[200px] sm:size-[240px] relative;
 
       .animate-speak {
         @apply absolute inline-flex size-5/6 animate-ping rounded-full bg-primary-200 opacity-75;
@@ -229,11 +231,11 @@
     }
 
     .card-border {
-      @apply border-gradient p-0.5 rounded-2xl flex-1 sm:basis-1/2 w-full h-[400px] max-md:hidden;
+      @apply flex-center border-gradient p-0.5 rounded-2xl flex-1 sm:basis-1/2 w-full h-[400px] max-md:hidden;
     }
 
     .card-content {
-      @apply flex flex-col gap-2 justify-center items-center p-7 dark-gradient rounded-2xl min-h-full;
+      @apply flex flex-col gap-2 justify-center items-center p-7 dark-gradient rounded-lg min-h-full;
     }
   }
 
@@ -307,7 +309,7 @@
 }
 
 @utility blue-gradient-dark {
-  @apply bg-gradient-to-b from-[#171532] to-[#08090D];
+  @apply bg-gradient-to-b from-[#009de4] to-[#0335ca];
 }
 
 @utility blue-gradient {

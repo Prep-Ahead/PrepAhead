@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { vapi } from "@/lib/vapi.sdk";
 import { interviewer } from "@/constants";
 import { createFeedback } from "@/lib/actions/general.action";
+import WebcamPreview from "./webcampreview";
 
 enum CallStatus {
   INACTIVE = "INACTIVE",
@@ -150,12 +151,11 @@ const Agent = ({
       <div className="call-view">
         {/* AI Interviewer Card */}
         <div className="card-interviewer">
-          <div className="avatar">
+          <div className="avatar relative w-[60%] aspect-square rounded-lg overflow-hidden mx-auto">
             <Image
-              src="/ai-avatar.png"
+              src="/jake-avatar.jpg"
               alt="profile-image"
-              width={65}
-              height={54}
+              fill
               className="object-cover"
             />
             {isSpeaking && <span className="animate-speak" />}
@@ -166,13 +166,7 @@ const Agent = ({
         {/* User Profile Card */}
         <div className="card-border">
           <div className="card-content">
-            <Image
-              src="/user-avatar.png"
-              alt="profile-image"
-              width={539}
-              height={539}
-              className="rounded-full object-cover size-[120px]"
-            />
+            <WebcamPreview />
             <h3>{userName}</h3>
           </div>
         </div>
