@@ -153,7 +153,7 @@ const Agent = ({
         <div className="card-interviewer">
           <div className="avatar relative w-[60%] aspect-square rounded-lg overflow-hidden mx-auto">
             <Image
-              src="/jake-avatar.jpg"
+              src="/ai-avatar-sq.png"
               alt="profile-image"
               fill
               className="object-cover"
